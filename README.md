@@ -28,6 +28,8 @@ Run this:
 git clone https://github.com/tvarley/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
