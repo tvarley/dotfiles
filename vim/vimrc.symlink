@@ -38,6 +38,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'slim-template/vim-slim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
@@ -54,8 +55,10 @@ Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
-filetype plugin on
+" filetype plugin on
+
 "
 " Brief help
 " :PluginList          - list configured plugins
@@ -112,14 +115,24 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Syntastic config
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Nerdtree config
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
 
 " Krack the line at cursor
 map K i<Enter><Esc>
 
 " Automatically strip trailing whitespace on ruby file saves
 autocmd FileType ruby autocmd BufWritePre <buffer> %s/\s\+$//e
+
+autocmd BufNewFile,BufRead *.slim set filetype=slim
+
+" remap jj in insert mode to esc
+inoremap jj <Esc>
 
