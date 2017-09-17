@@ -1,0 +1,16 @@
+{
+  "name": "tvarley",
+  "version": "1.0.0",
+  "description": "dotfiles",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "4.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tim Varley <tim.varley@gmail.com>",
+  "license": "MIT"
+}
