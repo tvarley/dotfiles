@@ -34,7 +34,9 @@ Plugin 'gmarik/Vundle.vim'
 
 " My plugins
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -118,8 +120,9 @@ set statusline+=%*
 " Syntastic config
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Nerdtree config
 let g:NERDTreeShowHidden = 1
