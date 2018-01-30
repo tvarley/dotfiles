@@ -137,6 +137,9 @@ let g:NERDCommentEmptyLines = 1
 " Krack the line at cursor
 map K i<Enter><Esc>
 
+" Stop vimtex complaining about no clientserver support
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+
 " Automatically strip trailing whitespace on ruby file saves
 autocmd FileType ruby autocmd BufWritePre <buffer> %s/\s\+$//e
 
