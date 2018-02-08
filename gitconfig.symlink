@@ -1,0 +1,13 @@
+[user]
+	name = Tim Varley
+	email = tim.varley@gmail.com
+[core]
+	editor = vim
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[color "diff"]
+  commit = blue
